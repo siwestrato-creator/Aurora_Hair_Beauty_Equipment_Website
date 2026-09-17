@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aurora Hair & Beauty Equipment — professional salon tools and equipment in Johannesburg. Order by WhatsApp.">
+<title>Aurora Hair & Beauty Equipment | Johannesburg</title>
+<style>
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+:root{--navy:#15212b;--gold:#c89b5d;--sand:#f3eee7;--text:#1d252b;--muted:#69737b;--white:#fff;--border:#ded8cf}
+body{margin:0;color:var(--text);font-family:Arial,Helvetica,sans-serif;background:#fff}
+a{text-decoration:none;color:inherit} .wrap{width:min(1160px,92%);margin:auto}
+header{background:var(--navy);color:white}
+.mini{font-size:12px;letter-spacing:.7px;border-bottom:1px solid rgba(255,255,255,.12);padding:9px 0;text-align:center}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:Georgia,serif;font-size:25px;font-weight:bold;letter-spacing:.3px}
+.logo i{font-style:normal;color:var(--gold)}
+.navlinks{display:flex;gap:28px;font-size:14px}
+.navlinks a:hover{color:#e1bb86}
+.navbtn{padding:11px 18px;border-radius:6px;background:var(--gold);color:#17222b;font-weight:bold;font-size:13px}
+.hero{background:var(--sand);min-height:570px;display:flex;align-items:center}
+.heroGrid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;padding:70px 0}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2.4px;color:#8c6739;font-weight:bold}
+h1{font-family:Georgia,serif;font-size:clamp(44px,6vw,72px);line-height:1.02;margin:14px 0 20px;color:var(--navy)}
+.hero p{font-size:17px;line-height:1.8;color:var(--muted);max-width:570px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:14px 20px;border-radius:6px;font-weight:bold;border:1px solid var(--navy)}
+.btn.dark{background:var(--navy);color:#fff} .btn.light{background:#fff}
+.heroVisual{background:#fff;padding:14px;box-shadow:0 18px 45px rgba(21,33,43,.13);border-radius:4px}
+.heroVisual img{display:block;width:100%;height:390px;object-fit:contain;background:#fafafa}
+.heroNote{display:flex;justify-content:space-between;padding:15px 4px 2px;font-size:13px}
+.heroNote span{color:var(--muted)}
+section{padding:76px 0} .soft{background:#f8f7f5}
+.heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}
+.heading h2{font-family:Georgia,serif;font-size:40px;margin:6px 0 0;color:var(--navy)}
+.heading p{color:var(--muted);max-width:550px;margin:0;line-height:1.7}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:25px}
+.filter{border:1px solid var(--border);background:#fff;padding:9px 14px;border-radius:5px;cursor:pointer;font-weight:bold;font-size:12px}
+.filter.active,.filter:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{border:1px solid var(--border);background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.pic{height:230px;background:#f7f7f7;padding:12px;display:flex;align-items:center;justify-content:center}
+.pic img{width:100%;height:100%;object-fit:contain}
+.body{padding:17px} .cat{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#a0713e;font-weight:bold}
+.card h3{font-size:16px;line-height:1.35;margin:8px 0 9px}
+.card p{font-size:12px;line-height:1.6;color:var(--muted);margin:0 0 15px}
+.order{display:block;text-align:center;padding:11px;background:var(--navy);color:white;border-radius:4px;font-size:12px;font-weight:bold}
+.order:hover{background:#263946}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature{padding:28px;background:white;border:1px solid var(--border)}
+.feature b{display:block;font-family:Georgia,serif;font-size:22px;color:var(--navy);margin-bottom:8px}
+.feature p{color:var(--muted);font-size:14px;line-height:1.7;margin:0}
+.contact{background:var(--navy);color:#fff}
+.contactGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px}
+.contact h2{font-family:Georgia,serif;font-size:43px;margin:7px 0 15px}
+.contact p{color:#c8d0d5;line-height:1.8;max-width:620px}
+.contactBox{border:1px solid rgba(255,255,255,.18);padding:26px;background:rgba(255,255,255,.04)}
+.contactBox h3{font-family:Georgia,serif;font-size:25px;margin-top:0}
+.line{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:14px}
+.line:last-child{border:0}
+.gold{color:#e2b777}
+.contact .btn{margin-top:18px;background:var(--gold);color:var(--navy);border-color:var(--gold)}
+footer{background:#0e171e;color:#8d969d;font-size:12px;padding:25px 0}
+.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:900px){.heroGrid,.contactGrid{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}.navlinks{display:none}}
+@media(max-width:560px){section{padding:55px 0}.products{grid-template-columns:1fr}.heroGrid{padding:55px 0}.heroVisual img{height:300px}.heading{display:block}.heading p{margin-top:10px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="mini">JOHANNESBURG • SOUTH AFRICA &nbsp; | &nbsp; PROFESSIONAL HAIR & BEAUTY EQUIPMENT</div>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Aurora <i>Hair & Beauty</i></a>
+    <div class="navlinks"><a href="#collection">Collection</a><a href="#service">Our Service</a><a href="#contact">Contact</a></div>
+    <a class="navbtn" href="https://wa.me/27787412314" target="_blank" rel="noopener">WHATSAPP ORDER</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap heroGrid">
+    <div>
+      <div class="eyebrow">Salon equipment • Styling • Barbering</div>
+      <h1>Professional tools. Beautiful results.</h1>
+      <p>Welcome to Aurora Hair & Beauty Equipment. Browse our carefully presented collection of professional salon tools and equipment, then contact us directly for current prices and availability.</p>
+      <div class="buttons">
+        <a class="btn dark" href="#collection">Explore Collection</a>
+        <a class="btn light" href="https://wa.me/27787412314" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="heroVisual">
+      <img src="images/Parlux-Alyon-2250w-Turquoise.jpg" alt="Parlux Alyon professional hair dryer">
+      <div class="heroNote"><strong>Featured: Parlux Alyon</strong><span>Professional styling</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="collection">
+<div class="wrap">
+  <div class="heading">
+    <div><div class="eyebrow">The collection</div><h2>Salon essentials</h2></div>
+    <p>From professional dryers and clippers to salon treatment equipment and styling accessories, find the tools suited to your work.</p>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="products" id="products"></div>
+</div>
+</section>
+
+<section class="soft" id="service">
+<div class="wrap">
+  <div class="heading">
+    <div><div class="eyebrow">Why Aurora</div><h2>Easy, personal service</h2></div>
+    <p>We keep ordering simple: choose a product, send us a WhatsApp message, and we'll confirm the details with you.</p>
+  </div>
+  <div class="features">
+    <div class="feature"><b>Browse with ease</b><p>Clear product photos and categories make it easy to find the equipment you're looking for.</p></div>
+    <div class="feature"><b>Order directly</b><p>Every product has a WhatsApp order button so you can enquire without a complicated online checkout.</p></div>
+    <div class="feature"><b>Johannesburg based</b><p>Our business is based in Lorentzville, Johannesburg, South Africa.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="wrap contactGrid">
+  <div>
+    <div class="eyebrow gold">Contact Aurora</div>
+    <h2>Ready to find your next salon tool?</h2>
+    <p>Send us the name of the product you're interested in. We'll help you with current availability, pricing and ordering.</p>
+    <a class="btn" href="https://wa.me/27787412314" target="_blank" rel="noopener">Start a WhatsApp Order</a>
+  </div>
+  <div class="contactBox">
+    <h3>Visit / Contact</h3>
+    <div class="line"><strong>WhatsApp:</strong> 078 741 2314</div>
+    <div class="line"><strong>Address:</strong> 3 South Street</div>
+    <div class="line">Lorentzville, Johannesburg</div>
+    <div class="line">2094, South Africa</div>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=3%20South%20Street%2C%20Lorentzville%2C%20Johannesburg%2C%202094%2C%20South%20Africa" target="_blank" rel="noopener">Open Google Maps</a>
+  </div>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap foot"><span>© 2026 Aurora Hair & Beauty Equipment</span><span>Professional hair & beauty equipment • Johannesburg</span></div></footer>
+
+<script>
+const data = [{"image": "images/Brazilian-Gold-THC-Ceramic-T-Flat-Iron.jpg", "name": "Brazilian Gold Ceramic T-Flat Iron", "category": "Styling Tools"}, {"image": "images/Climazone-Infra-Red-5-Head-Stand.jpg", "name": "Climazone Infra-Red 5-Head Stand", "category": "Salon Equipment"}, {"image": "images/Climazone-Rollerball-Wall-Mounted.jpg", "name": "Climazone Rollerball Wall Mounted", "category": "Salon Equipment"}, {"image": "images/Hair-Dryer-IQ_Perfetto_Black.jpg", "name": "IQ Perfetto Professional Hair Dryer", "category": "Hair Dryers"}, {"image": "images/Hair-Dryer-Parlux-2800-Pro.jpg", "name": "Parlux 2800 Professional Hair Dryer", "category": "Hair Dryers"}, {"image": "images/Hair-Hood-Dryer-Wall-Mounted.png", "name": "Wall-Mounted Hood Hair Dryer", "category": "Salon Equipment"}, {"image": "images/Hair-Steamer-on-Stand-Rebalta.jpg", "name": "Rebalta Hair Steamer on Stand", "category": "Salon Equipment"}, {"image": "images/Heat-Curling-Iron-Set-3pcs-with-Glove.jpg", "name": "3-Piece Heat Curling Iron Set with Glove", "category": "Styling Tools"}, {"image": "images/Hooded-Hair-Dryer-2-speed-white.png", "name": "Hooded Hair Dryer – 2 Speed", "category": "Salon Equipment"}, {"image": "images/Hooded-Hair-Dryer-Ionic-3-Speed.jpg", "name": "Ionic Hooded Hair Dryer – 3 Speed", "category": "Salon Equipment"}, {"image": "images/IMG_3526.jpg", "name": "Professional Finger Diffuser", "category": "Accessories"}, {"image": "images/Parlux-Advance-Light-Black.jpg", "name": "Parlux Advance Light – Black", "category": "Hair Dryers"}, {"image": "images/Parlux-Alyon-2250w-Turquoise.jpg", "name": "Parlux Alyon 2250W – Turquoise", "category": "Hair Dryers"}, {"image": "images/Parlux-Alyon-Graphite.jpg", "name": "Parlux Alyon – Graphite", "category": "Hair Dryers"}, {"image": "images/Parlux-Diffuser-3800.jpg", "name": "Parlux Diffuser 3800", "category": "Accessories"}, {"image": "images/Parlux-Melody-Silencer.jpg", "name": "Parlux Melody Silencer", "category": "Accessories"}, {"image": "images/Parlux-Pink.jpg", "name": "Parlux Alyon – Pink", "category": "Hair Dryers"}, {"image": "images/Wahl-100-Year-Anniversary.jpg", "name": "Wahl 100-Year Anniversary Clipper", "category": "Clippers"}, {"image": "images/Wahl-Bella-cordless.jpg", "name": "Wahl Bella Cordless Clipper", "category": "Clippers"}, {"image": "images/Wahl-Bellina-Cordless-Clipper-Grey.jpg", "name": "Wahl Bellina Cordless Clipper – Grey", "category": "Clippers"}];
+const grid = document.getElementById('products');
+const filters = document.getElementById('filters');
+const cats = ['All', ...new Set(data.map(x => x.category))];
+
+function whatsapp(name) {
+  return 'https://wa.me/27787412314?text=' + encodeURIComponent(
+    'Hi Aurora Hair & Beauty Equipment, I am interested in: ' + name + '. Please confirm the current price and availability.'
+  );
+}
+function draw(category='All') {
+  const list = category === 'All' ? data : data.filter(x => x.category === category);
+  grid.innerHTML = list.map(x => `
+    <article class="card">
+      <div class="pic"><img src="${x.image}" alt="${x.name}" loading="lazy"></div>
+      <div class="body">
+        <div class="cat">${x.category}</div>
+        <h3>${x.name}</h3>
+        <p>Professional salon product. Contact us for current price and availability.</p>
+        <a class="order" href="${whatsapp(x.name)}" target="_blank" rel="noopener">ORDER ON WHATSAPP</a>
+      </div>
+    </article>
+  `).join('');
+}
+filters.innerHTML = cats.map((c,i) => `<button class="filter ${i===0?'active':''}" data-c="${c}">${c}</button>`).join('');
+filters.addEventListener('click', e => {
+  if(!e.target.classList.contains('filter')) return;
+  document.querySelectorAll('.filter').forEach(x => x.classList.remove('active'));
+  e.target.classList.add('active'); draw(e.target.dataset.c);
+});
+draw();
+</script>
+</body>
+</html>
